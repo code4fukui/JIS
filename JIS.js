@@ -3,13 +3,11 @@ import { SJIS } from "https://code4fukui.github.io/SJIS/SJIS.js";
 // from https://github.com/polygonplanet/encoding.js/blob/master/encoding.js#L161
 
 export const JISToSJIS = (data) => {
-  var results = [];
-  var index = 0;
-  var i = 0;
-  var len = data && data.length;
-  var b1, b2;
+  const results = [];
+  const len = data && data.length;
 
-  for (; i < len; i++) {
+  for (let i = 0; i < len; i++) {
+    let index = 0;
     // escape sequence
     while (data[i] === 0x1B) {
       if ((data[i + 1] === 0x24 && data[i + 2] === 0x42) ||
@@ -32,8 +30,8 @@ export const JISToSJIS = (data) => {
     }
 
     if (index === 1) {
-      b1 = data[i];
-      b2 = data[++i];
+      let b1 = data[i];
+      let b2 = data[++i];
       if (b1 & 0x01) {
         b1 >>= 1;
         if (b1 < 0x2F) {
@@ -75,20 +73,18 @@ export const JISToSJIS = (data) => {
  * SJIS to JIS
  */
 export const SJISToJIS = (data) => {
-  var results = [];
-  var index = 0;
-  var len = data && data.length;
-  var i = 0;
-  var b1, b2;
+  const results = [];
+  const len = data && data.length;
 
-  var esc = [
+  const esc = [
     0x1B, 0x28, 0x42,
     0x1B, 0x24, 0x42,
     0x1B, 0x28, 0x49
   ];
 
-  for (; i < len; i++) {
-    b1 = data[i];
+  let index = 0;
+  for (let i = 0; i < len; i++) {
+    let b1 = data[i];
     if (b1 >= 0xA1 && b1 <= 0xDF) {
       if (index !== 2) {
         index = 2;
@@ -106,7 +102,7 @@ export const SJISToJIS = (data) => {
       }
 
       b1 <<= 1;
-      b2 = data[++i];
+      let b2 = data[++i];
       if (b2 < 0x9F) {
         if (b1 < 0x13F) {
           b1 -= 0xE1;
