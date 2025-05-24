@@ -11,18 +11,22 @@ console.log(JIS.decode(new Uint8Array([27, 36, 66, 36, 34, 27, 40, 66])));
 
 ## privilege
 
-- --allow-import
+- --allow-import=code4fukui.github.io
 
 for [Deno](https://deno.com/)
 ```sh
-deno --allow-import JIS.example.js
+deno --allow-import=code4fukui.github.io JIS.example.js
 ```
 
 ## test
 
 ```sh
-deno test --allow-import
+deno test --allow-import=code4fukui.github.io
 ```
+
+## browser support check
+
+- [jis.html](https://code4fukui.github.io/JIS/jis.html) by [makeHTML.js](makeHTML.js)
 
 ## reference
 
