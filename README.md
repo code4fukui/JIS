@@ -2,8 +2,7 @@
 
 A [JIS Kanji Code](https://ja.wikipedia.org/wiki/JIS%E6%BC%A2%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89) encoder and decoder in JavaScript (ES modules)
 
-## Demo
-The `jis.html` file provides a demo of the JIS encoding/decoding.
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
 ## Features
 - Encode and decode JIS Kanji Code
