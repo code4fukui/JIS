@@ -1,13 +1,10 @@
 # JIS
 
-JISカタカナコードをエンコードおよびデコードするJavaScriptライブラリ(ES modules)です。
-
-## デモ
-[jis.html](https://code4fukui.github.io/JIS/jis.html)でJISエンコーディングされたHTMLを確認できます。
+JISカンジコードをエンコードおよびデコードするJavaScriptライブラリです。
 
 ## 機能
-- JISからShift_JISへのエンコード/デコード
 - Shift_JISからJISへのエンコード/デコード
+- JISからShift_JISへのエンコード/デコード
 
 ## 必要環境
 [Deno](https://deno.com/)を使用する場合は、`--allow-import=code4fukui.github.io`オプションが必要です。

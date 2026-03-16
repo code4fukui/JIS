@@ -1,6 +1,6 @@
 # JIS
 
-A [JIS Kanji Code](https://ja.wikipedia.org/wiki/JIS%E6%BC%A2%E5%AD%97%E3%82%B3%E3%83%BC%E3%83%89) encoder and decoder in JavaScript (ES modules)
+A JIS Kanji Code encoder and decoder in JavaScript (ES modules).
 
 > 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
@@ -31,4 +31,4 @@ deno test --allow-import=code4fukui.github.io
 ```
 
 ## License
-MIT
+MIT License — see [LICENSE](LICENSE).
